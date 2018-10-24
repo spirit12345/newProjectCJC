@@ -9,6 +9,7 @@ public class HomeController {
 public String start()
 {
 System.out.println("In start()");
+System.out.println("Update Project");
 return "home";
 }
 }
