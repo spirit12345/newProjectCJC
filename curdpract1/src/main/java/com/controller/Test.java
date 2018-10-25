@@ -17,7 +17,7 @@ public class Test {
 	public static void main(String[] args) {
 		
 		System.out.println("In main");
-System.out.println("hiiiiiiii");
+System.out.println("hello");
 		SpringApplication.run(Test.class, args);
 		System.out.println("end main");
 		System.out.println("innnnn");
