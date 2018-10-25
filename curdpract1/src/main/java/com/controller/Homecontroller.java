@@ -52,5 +52,7 @@ public class Homecontroller {
 		}
 	}
 	
-
+public String M1()
+{
+	}
 }
