@@ -6,16 +6,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="pink">
 <form action="register">
 <center>
 <pre>
 
 <h2>Register Page</h2>
+NAME:<input type="text" name="name">
+
+MOBILE:<input type="text" name="mob">
+
+CITY:<input type="text" name="city">
+
+ADDRESS:<input type="text" name="address">
 
 USERNAME:<input type="text" name="username">
 
 PASSWORD:<input type="text" name="password">
+
+
 
 <input type="submit" value="Submit">  
 

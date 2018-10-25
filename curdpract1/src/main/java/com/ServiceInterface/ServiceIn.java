@@ -1,5 +1,7 @@
 package com.ServiceInterface;
 
-public interface ServiceIn {
+import com.model.Student;
 
+public interface ServiceIn {
+public Student save(Student s);
 }

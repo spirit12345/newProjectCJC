@@ -13,9 +13,29 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	private String name;
+	private String name, mob,address;
+	private String city;
 	@OneToOne(cascade=CascadeType.ALL)
-	private Login log;
+	private Login login;
+	public Login getLogin() {
+		return login;
+	}
+	public void setLogin(Login login) {
+		this.login = login;
+	}
+	public String getMob() {
+		return mob;
+	}
+	public void setMob(String mob) {
+		this.mob = mob;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -34,7 +54,7 @@ public class Student {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	private String city;
+	
 	
 	
 	
