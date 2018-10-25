@@ -20,7 +20,7 @@ public class Homecontroller {
 	public String login()
 	{
 		System.out.println("In login");
-		System.out.println("login page");
+		System.out.println("In login page ");
 		return "login";
 		
 		
