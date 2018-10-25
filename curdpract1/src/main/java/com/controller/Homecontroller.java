@@ -1,10 +1,13 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import com.ServiceInterface.ServiceIn;
 import com.model.Login;
@@ -22,6 +25,18 @@ public class Homecontroller {
 		System.out.println("In login");
 		return "login";
 		
+		
+	}
+	
+	@RequestMapping("/log")
+	public String loginCheck(Model model)
+	{
+		System.out.println("In Checklogin of homecontroller");
+		List data=service.getAllRecord();
+		model.addAttribute("msg", "Welcome to Success Page");
+		model.addAttribute("data", data);
+		return "Success";
+
 		
 	}
 	
@@ -60,15 +75,19 @@ public class Homecontroller {
 /*@RequestMapping("/update")
 public String updateRecord(@ModelAttribute Login l,Student s, Model model)
 {
-System.out.println("In updateRecord of homecontroller");
+System.out.println("In updateRecord of homecontroller"+s.getName()+"  "+s.getAddress());
 s.setLogin(l);
-service.save(s);
+List data=service.updateStudent(s);
+model.addAttribute("msg", "Welcome to Success Page after updating record");
+model.addAttribute("data", data);
 return "Success";
-}
-*/
+}*/
+
+	
+	
 	
 	@RequestMapping("/edit")
-	public String editRecord(@ModelAttribute Student s, Model model)
+	public String editRecord(@ModelAttribute Student s,Login l, Model model)
 	{
 		System.out.println("In editRecord of homecontroller----id :"+s.getId());
 		Student s1=service.findAllById(s.getId());
