@@ -31,6 +31,12 @@ public class Homecontroller {
 		return "Register";
 	}
 	
+	/*@RequestMapping("/demo")
+	public String demo()
+	{
+		System.out.println("do not think about it....just a demo");
+		return "demo";
+	}*/
 	
 	@RequestMapping("/register")
 	public String save(@ModelAttribute Student s, Login l, Model model)
