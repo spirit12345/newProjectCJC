@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body bgcolor="pink">
+<body bgcolor="aaeeff">
 <form action="register">
 <center>
 <pre>
@@ -16,9 +16,9 @@ NAME:<input type="text" name="name">
 
 MOBILE:<input type="text" name="mob">
 
-CITY:<input type="text" name="city">
-
 ADDRESS:<input type="text" name="address">
+
+CITY:<input type="text" name="city">
 
 USERNAME:<input type="text" name="username">
 
