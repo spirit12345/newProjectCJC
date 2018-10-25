@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="aafefe">
 <form action="login">
 <center>
 <pre>
@@ -17,9 +17,9 @@ USERNAME:<input type="text" name="username">
 
 PASSWORD:<input type="text" name="password">
 
-<input type="submit" value="Login">  <a href="reg">Register Here</a>
+<input type="submit" value="Login">  
 
-
+<a href="reg">Register Here</a>
 
 </pre>
 

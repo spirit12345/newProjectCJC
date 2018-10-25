@@ -47,7 +47,7 @@ public class Homecontroller {
 		{
 		String msg ="Registration Successfull....";
 		model.addAttribute("msg", msg);
-		return "Success";
+		return "login";
 		}
 		else
 		{
