@@ -13,6 +13,8 @@
 
 <h2>Login Page</h2>
 
+<h3>${msg}</h3>
+
 USERNAME:<input type="text" name="username">
 
 PASSWORD:<input type="text" name="password">

@@ -1,10 +1,13 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.ServiceInterface.ServiceIn;
 import com.model.Login;
@@ -42,7 +45,7 @@ public class Homecontroller {
 		{
 		String msg ="Registration Successfull....";
 		model.addAttribute("msg", msg);
-		return "Success";
+		return "login";
 		}
 		else
 		{
@@ -51,8 +54,34 @@ public class Homecontroller {
 			return "login";
 		}
 	}
-	
-public String M1()
-{
+
+	@RequestMapping("/login")
+	public ModelAndView LoginUser(@ModelAttribute Student s,@ModelAttribute Login l)
+	{
+		
+		System.out.println(l.getUsername()+" "+l.getPassword());
+		Login lt=service.findAllByUsernameAndPassword(l.getUsername(),l.getPassword());
+		
+		if(lt!=null)
+		{
+			
+			List<Student> lst=service.getAll(s);
+			System.out.println(lst);
+			return new ModelAndView("Success","data",lst);
+			
+		}
+		else
+		{
+			
+			return new ModelAndView("login","msg","Incorrect username and password");
+		}
+		
+		
+		
+		
+		
 	}
+	
+	
+
 }
