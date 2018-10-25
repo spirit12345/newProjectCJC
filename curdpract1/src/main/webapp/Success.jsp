@@ -4,11 +4,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<script type="text/javascript">
+function add()
+{
+	
+	document.fm.action="reg";
+	document.fm.submit();
+	
+	
+	}
+function edit()
+{
+	
+	document.fm.action="edit";
+	document.fm.submit();
+	
+	
+	}
+function del()
+{
+	
+	document.fm.action="del";
+	document.fm.submit();
+	
+	
+	}
+
+
+
+</script>
 </head>
 <body bgcolor="powderblue">
-<h1></h1>
+<form name="fm">
 <center>
 <pre>
 <h3>Success Page</h3>
@@ -17,7 +44,7 @@
 <c:forEach items="${data}" var="s">
 
 <tr>
-<td>${s.id}</td>
+<td><input type="radio" name="id" value="${s.id}"></td>
 <td>${s.name}</td>
 <td>${s.mob}</td>
 <td>${s.city}</td>
@@ -28,6 +55,9 @@
 
 </tr>
 </c:forEach>
+<tr><td colspan="7"><input type="button" value="add" onclick="add()" ><input type="button" value="edit" onclick="edit()" ><input type="button" value="delete" onclick="del()" ></td></tr>
+
+
 </table>
 
 </pre>
@@ -36,7 +66,7 @@
 </center>
 
 
-
+</form>
 
 </body>
 </html>

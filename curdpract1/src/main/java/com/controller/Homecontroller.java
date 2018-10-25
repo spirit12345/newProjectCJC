@@ -77,11 +77,23 @@ public class Homecontroller {
 		}
 		
 		
+	}
+	
+	
+	@RequestMapping("/del")
+	public ModelAndView deletedata(@ModelAttribute Student s,@ModelAttribute Login l)
+	{
+		
+		
+		System.out.println("in delete");
+		
+	            List<Student> st=service.delete(s);
+		System.out.println(st);
+		
+		return new ModelAndView("Success","data",st);
 		
 		
 		
 	}
-	
-	
 
 }

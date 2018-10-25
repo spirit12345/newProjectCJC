@@ -37,6 +37,14 @@ DaoInLogin daol;
 		
 	}
 	
+	public List<Student> delete(Student s)
+	{
+		
+		dao.delete(s.getId());
+		return getAll(s);
+		
+	}
+	
 	
 
 }

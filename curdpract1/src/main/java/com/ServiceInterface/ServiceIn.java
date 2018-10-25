@@ -9,5 +9,5 @@ public interface ServiceIn {
 public Student save(Student s);
 public Login findAllByUsernameAndPassword(String username,String password);
 public List<Student> getAll(Student s);
-
+public List<Student> delete(Student s);
 }
