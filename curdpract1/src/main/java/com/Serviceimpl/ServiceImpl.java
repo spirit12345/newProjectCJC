@@ -15,5 +15,10 @@ DaoIn dao;
 		System.out.println("In service save");
 		return dao.save(s);
 	}
+	@Override
+	public Student findAllById(int i) {
+		System.out.println("In findAllById() of service implementation");
+		return dao.findAllById(i);
+	}
 
 }

@@ -52,5 +52,22 @@ public class Homecontroller {
 		}
 	}
 	
-
+/*@RequestMapping("/update")
+public String updateRecord(@ModelAttribute Login l,Student s, Model model)
+{
+System.out.println("In updateRecord of homecontroller");
+s.setLogin(l);
+service.save(s);
+return "Success";
+}
+*/
+	
+	@RequestMapping("/edit")
+	public String editRecord(@ModelAttribute Student s, Model model)
+	{
+		System.out.println("In editRecord of homecontroller----id :"+s.getId());
+		Student s1=service.findAllById(s.getId());
+		model.addAttribute("data", s1);
+		return "edit";
+	}
 }
