@@ -29,37 +29,12 @@ function del() {
 	document.myform.submit();
 }
 
-<script type="text/javascript">
-function add()
-{
-	
-	document.fm.action="reg";
-	document.fm.submit();
-	
-	
-	}
-function edit()
-{
-	
-	document.fm.action="edit";
-	document.fm.submit();
-	
-	
-	}
-function del()
-{
-	
-	document.fm.action="del";
-	document.fm.submit();
-	
-	
-	}
 
 
 </script>
 </head>
 <body bgcolor="powderblue">
-<<<<<<< HEAD
+
 <form name="myform">
 
 <center>
@@ -81,37 +56,10 @@ function del()
 <input type="button" value="Add Record" onclick="add()">		<input type="button" value="Edit Record" onclick="edit()">  		<input type="button" value="Delete Record" onclick="del()">
 </pre>
 </center>
-=======
-<form name="fm">
-<center>
-<pre>
-<h1>Successs data show</h1>
-<h3>Success Page</h3>
-<table border="3">
-<tr><th>Id</th><th>Name</th><th>Mobile</th><th>City</th><th>Address</th><th>Username</th><th>Password</th></tr>
-<c:forEach items="${data}" var="s">
-
-<tr>
-<td><input type="radio" name="id" value="${s.id}"></td>
-<td>${s.name}</td>
-<td>${s.mob}</td>
-<td>${s.city}</td>
-<td>${s.address}</td>
-<td>${s.login.username}</td>
-<td>${s.login.password}</td>
 
 
-</tr>
-</c:forEach>
-<tr><td colspan="7"><input type="button" value="add" onclick="add()" ><input type="button" value="edit" onclick="edit()" ><input type="button" value="delete" onclick="del()" ></td></tr>
 
 
-</table>
-
-</pre>
-
-
-</center>
 
 
 </form>

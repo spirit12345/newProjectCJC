@@ -13,7 +13,7 @@
 <h1>Data on Edit Page</h1>
 <h1>${msg}</h1>
 <table>
-
+<tr><td><input type="hidden" name="id" value="${data.id}"></td></tr>
 <tr><td>Name :</td><td><input type="text" name="name" value="${data.name}"></td></tr>
 <tr><td>Mobile :</td><td><input type="text" name="mob"value="${data.mob}"></td></tr>
 <tr><td>Address :</td><td><input type="text" name="address"value="${data.address}"></td></tr>

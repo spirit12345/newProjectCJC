@@ -25,18 +25,14 @@ DaoInLogin daol;
 	@Override
 	public Student findAllById(int i) {
 		System.out.println("In findAllById() of service implementation");
-		return dao.findAllById(i);
+		return dao.findOne(i);
 	}
-	@Override
-	public List<Student> getAllRecord() {
-		System.out.println("In getAllRecord() of service implementation");
-		return (List) dao.findAll();
-	}
-	@Override
-	public List<Student> updateStudent(Student s) {
+	
+	
+	public Student updateStudent(Student s) {
 		System.out.println("In update of service"+s.getName());
-		dao.save(s);
-		return (List)dao.findAll();
+		
+		return dao.save(s);
 	}
 	
 	

@@ -97,16 +97,26 @@ public class Homecontroller {
 		
 	}	
 
-/*@RequestMapping("/update")
+@RequestMapping("/update")
 public String updateRecord(@ModelAttribute Login l,Student s, Model model)
 {
 System.out.println("In updateRecord of homecontroller"+s.getName()+"  "+s.getAddress());
 s.setLogin(l);
-List data=service.updateStudent(s);
+Student da=service.updateStudent(s);
+if(da!=null)
+{
+	
+	
+List<Student> data=service.getAll(s);
 model.addAttribute("msg", "Welcome to Success Page after updating record");
 model.addAttribute("data", data);
 return "Success";
-}*/
+}
+else
+{
+	return "edit";
+	}
+}
 
 	
 	@RequestMapping("/del")

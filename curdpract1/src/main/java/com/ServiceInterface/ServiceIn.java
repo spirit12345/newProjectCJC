@@ -9,9 +9,8 @@ import com.model.Student;
 public interface ServiceIn {
 public Student save(Student s);
 public Student findAllById(int i);
-List<Student> updateStudent(Student s);
+Student updateStudent(Student s);
 public List<Student> getAll(Student s);
 public List<Student> delete(Student s);
 Login findAllByUsernameAndPassword(String username, String password);
-List getAllRecord();
 }
