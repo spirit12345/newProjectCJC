@@ -38,6 +38,7 @@ function del()
 <form name="fm">
 <center>
 <pre>
+<h1>-------</h1>
 <h3>Success Page</h3>
 <table border="3">
 <tr><th>Id</th><th>Name</th><th>Mobile</th><th>City</th><th>Address</th><th>Username</th><th>Password</th></tr>
