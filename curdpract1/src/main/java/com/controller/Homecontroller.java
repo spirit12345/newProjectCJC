@@ -25,7 +25,7 @@ public class Homecontroller {
 		System.out.println("In login");
 		System.out.println("In login page ");
 		return "login";
-		
+		nnnnnnnnnnnnnnnnn
 		
 	}
 	
