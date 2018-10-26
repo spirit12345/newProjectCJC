@@ -89,7 +89,7 @@ public class Homecontroller {
 		
 	            List<Student> st=service.delete(s);
 		System.out.println(st);
-		
+		System.out.println("in delete");
 		return new ModelAndView("Success","data",st);
 		
 		
