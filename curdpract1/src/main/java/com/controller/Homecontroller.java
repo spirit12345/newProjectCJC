@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 
 import com.ServiceInterface.ServiceIn;
@@ -29,10 +30,10 @@ public class Homecontroller {
 	}
 	
 	@RequestMapping("/log")
-	public String loginCheck(Model model)
+	public String loginCheck(@ModelAttribute Student s, Login l, Model model)
 	{
 		System.out.println("In Checklogin of homecontroller");
-		List data=service.getAllRecord();
+		List data=service.getAll(s);
 		model.addAttribute("msg", "Welcome to Success Page");
 		model.addAttribute("data", data);
 		return "Success";
@@ -71,7 +72,31 @@ public class Homecontroller {
 			return "login";
 		}
 	}
-	
+
+	@RequestMapping("/login")
+	public ModelAndView LoginUser(@ModelAttribute Student s,@ModelAttribute Login l)
+	{
+		
+		System.out.println(l.getUsername()+" "+l.getPassword());
+		Login lt=service.findAllByUsernameAndPassword(l.getUsername(),l.getPassword());
+		
+		if(lt!=null)
+		{
+			
+			List<Student> lst=service.getAll(s);
+			System.out.println(lst);
+			return new ModelAndView("Success","data",lst);
+			
+		}
+		else
+		{
+			
+			return new ModelAndView("login","msg","Incorrect username and password");
+		}
+		
+		
+	}	
+
 /*@RequestMapping("/update")
 public String updateRecord(@ModelAttribute Login l,Student s, Model model)
 {
@@ -82,6 +107,24 @@ model.addAttribute("msg", "Welcome to Success Page after updating record");
 model.addAttribute("data", data);
 return "Success";
 }*/
+
+	
+	@RequestMapping("/del")
+	public ModelAndView deletedata(@ModelAttribute Student s,@ModelAttribute Login l)
+	{
+		
+		
+		System.out.println("in delete");
+		
+	            List<Student> st=service.delete(s);
+		System.out.println(st);
+		System.out.println("in delete");
+		return new ModelAndView("Success","data",st);
+		
+		
+		
+	}
+
 
 	
 	

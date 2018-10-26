@@ -10,7 +10,7 @@
 <body bgcolor="pink">
 <form action="update">
 <center>
-<h1>Edit Page</h1>
+<h1>Data on Edit Page</h1>
 <h1>${msg}</h1>
 <table>
 
