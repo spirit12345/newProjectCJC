@@ -42,7 +42,7 @@ function del()
 <table border="3">
 <tr><th>Id</th><th>Name</th><th>Mobile</th><th>City</th><th>Address</th><th>Username</th><th>Password</th></tr>
 <c:forEach items="${data}" var="s">
-<h3>hiii</h3>
+
 <tr>
 <td><input type="radio" name="id" value="${s.id}"></td>
 <td>${s.name}</td>
