@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="aafefe">
-<form action="login">
+<form action="log">
 <center>
 <pre>
 
